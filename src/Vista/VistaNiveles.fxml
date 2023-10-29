@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VistaNivelesController">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="576.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/gaming2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnRegresar" contentDisplay="GRAPHIC_ONLY" onAction="#exit" prefHeight="59.0" prefWidth="60.0" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="27.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="50" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblNiveles" layoutX="73.0" prefHeight="461.0" prefWidth="883.0" stylesheets="@Css/diseño_resto.css">
+        <columns>
+          <TableColumn fx:id="colNombreNivel" prefWidth="75.0" text="NOMBRE" />
+            <TableColumn fx:id="colTiempoNivel" prefWidth="75.0" text="TIEMPO (segundos)" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TableView>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="458.0" layoutY="481.0" onAction="#ingresarNivel" prefHeight="76.0" prefWidth="113.0">
+         <graphic>
+            <ImageView fitHeight="71.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/pressStart.gif" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

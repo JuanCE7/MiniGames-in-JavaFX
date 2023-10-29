@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VistaLoginController">
+   <children>
+      <AnchorPane layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="fondo1" fitHeight="500.0" fitWidth="600.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/gaming.png" />
+               </image></ImageView>
+            <JFXTextField fx:id="txtUsuarioLogin" focusColor="WHITE" labelFloat="true" layoutX="163.0" layoutY="192.0" onAction="#login" onKeyTyped="#eventKey" pickOnBounds="false" prefHeight="25.0" prefWidth="275.0" promptText="Usuario" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPasswordLogin" focusColor="#4d4d4d" labelFloat="true" layoutX="163.0" layoutY="248.0" prefHeight="25.0" prefWidth="275.0" style="-fx-prompt-text-fill: #fff; -fx-text-inner-color: #fff;">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pfPasswordLogin" focusColor="WHITE" labelFloat="true" layoutX="163.0" layoutY="248.0" onAction="#login" onKeyTyped="#eventKey" prefHeight="23.0" prefWidth="275.0" promptText="Contraseña" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="185.0" layoutY="47.0" prefHeight="78.0" prefWidth="232.0" stylesheets="@Css/diseño.css" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="55.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="-1.0" layoutY="10.0" onAction="#exit" prefHeight="40.0" prefWidth="40.0" text=" " translateX="1.0" translateY="-3.0">
+               <graphic>
+                  <MaterialDesignIconView fill="#fffefe" glyphName="CLOSE" size="30" styleClass="glyph-icon" text="" />
+               </graphic>
+            </JFXButton>
+            <Pane fx:id="icono" layoutX="406.0" layoutY="252.0" prefHeight="29.0" prefWidth="43.0">
+               <children>
+                  <FontAwesomeIconView fx:id="icon" fill="WHITE" glyphName="EYE_SLASH" layoutX="11.0" layoutY="21.0" size="15" />
+               </children>
+            </Pane>
+            <ImageView fx:id="user1" layoutX="122.0" layoutY="194.0" />
+            <ImageView fx:id="key1" layoutX="122.0" layoutY="250.0" />
+            <JFXButton fx:id="btnIngresar" contentDisplay="GRAPHIC_ONLY" layoutX="253.0" layoutY="322.0" onAction="#login" prefHeight="59.0" prefWidth="82.0">
+               <graphic>
+                  <ImageView fx:id="ingreso" />
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="95.0" fitWidth="98.0" layoutX="14.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/patitoCaminando.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="registro" layoutX="572.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#dragged" onMouseEntered="#preShow" onMouseExited="#postHide" onMousePressed="#pressed" prefHeight="500.0" prefWidth="578.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fx:id="fondo2" fitHeight="500.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/gaming.png" />
+               </image></ImageView>
+            <Label layoutX="139.0" layoutY="33.0" stylesheets="@Css/diseño.css" text="Registro" textFill="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="60.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCorreo" focusColor="WHITE" labelFloat="true" layoutX="170.0" layoutY="214.0" onAction="#register" onKeyTyped="#eventKeyTwo" prefHeight="25.0" prefWidth="260.0" promptText="Correo" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnRegistrar" buttonType="RAISED" layoutX="170.0" layoutY="420.0" onAction="#register" prefHeight="46.0" prefWidth="260.0" style="-fx-background-color: #fff; -fx-background-radius: 20;" stylesheets="@Css/diseño.css" text="R E G I S T R A R">
+               <font>
+                  <Font name="Haettenschweiler" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtUsuarioRegistro" focusColor="WHITE" labelFloat="true" layoutX="170.0" layoutY="284.0" onAction="#register" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="260.0" promptText="Usuario" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPasswordRegistro" focusColor="#4d4d4d" labelFloat="true" layoutX="170.0" layoutY="350.0" prefHeight="25.0" prefWidth="260.0" style="-fx-prompt-text-fill: #fff; -fx-text-inner-color: #fff;">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="pfPasswordRegistro" focusColor="WHITE" labelFloat="true" layoutX="170.0" layoutY="350.0" onAction="#register" onKeyTyped="#eventKey" prefHeight="25.0" prefWidth="260.0" promptText="Contraseña" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fx:id="mas" fitHeight="40.0" fitWidth="30.0" layoutX="-1.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="nombre" fitHeight="29.0" fitWidth="30.0" layoutX="111.0" layoutY="152.0">
+               <image>
+                  <Image url="@../Imagenes/icons8_male_user_50px_2.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="icono2" layoutX="400.0" layoutY="354.0" prefHeight="29.0" prefWidth="43.0">
+               <children>
+                  <FontAwesomeIconView fx:id="icon2" fill="WHITE" glyphName="EYE_SLASH" layoutX="11.0" layoutY="21.0" size="15" />
+               </children>
+            </Pane>
+            <ImageView fx:id="email" fitHeight="24.0" fitWidth="24.0" layoutX="114.0" layoutY="223.0">
+               <image>
+                  <Image url="@../Imagenes/icons8_envelope_24px_1.png" />
+               </image></ImageView>
+            <ImageView fx:id="user2" layoutX="114.0" layoutY="290.0">
+               <image>
+                  <Image url="@../Imagenes/icons8_user_24px_3.png" />
+               </image></ImageView>
+            <ImageView fx:id="pad1" layoutX="114.0" layoutY="357.0">
+               <image>
+                  <Image url="@../Imagenes/icons8_padlock_24px_1.png" />
+               </image></ImageView>
+            <Label fx:id="lbCorreo" layoutX="174.0" layoutY="255.0" prefHeight="17.0" prefWidth="253.0" textFill="WHITE" />
+            <JFXTextField fx:id="txtNombre" focusColor="WHITE" labelFloat="true" layoutX="171.0" layoutY="148.0" onAction="#register" onKeyTyped="#eventKeyTwo" prefHeight="25.0" prefWidth="260.0" promptText="Nombre" style="-fx-text-inner-color: #fff; -fx-prompt-text-fill: #fff;" unFocusColor="WHITE">
+               <font>
+                  <Font name="Haettenschweiler" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

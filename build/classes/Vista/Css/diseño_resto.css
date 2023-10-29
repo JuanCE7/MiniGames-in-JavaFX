@@ -1,0 +1,73 @@
+
+.button {
+    -fx-background-radius: 6;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Karmatic Arcade";
+    -fx-font-size: 12pt;
+    -fx-background-image: url(../..//audios/)
+}
+
+.label{
+    -fx-font-family: "Karmatic Arcade";
+    -fx-font-size: 13pt;
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+}
+
+.table-view .label {
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-font-family: "Karmatic Arcade";
+}
+
+.table-view .label .text{
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-font-family: "Karmatic Arcade";
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+}
+
+.table-view .column-header-background .label{
+    -fx-border-color: #ffffff;
+}
+
+.table-view .column-header .label{
+    -fx-alignment: center;
+    -fx-animated: true;
+    -fx-background-color: #8881fb;
+}
+
+.table-view .column-header{
+    -fx-alignment: center;
+    -fx-animated: true;
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3300ff;
+}
+
+.table-view .cell {
+    -fx-cell-size: 30;
+    -fx-font-size: 15;  
+    -fx-background-color: transparent;
+}
+
+.table-view .cell:selected{
+    -fx-background-color: #8881fb;
+}
+
+.table-view .cell .text{
+    -fx-fill: white;
+}

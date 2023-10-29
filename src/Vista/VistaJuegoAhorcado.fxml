@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VistaJuegoAhorcadoController">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="650.0" fitWidth="1042.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/gaming2.png" />
+         </image></ImageView>
+      <ImageView fx:id="sostenAhorcado" blendMode="SCREEN" fitHeight="424.0" fitWidth="480.0" layoutX="489.0" layoutY="101.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #00ff1e;">
+         <image>
+            <Image url="@../Imagenes/palosAhorcado.png" />
+         </image>
+         <effect>
+            <DropShadow color="#03b0ff" />
+         </effect></ImageView>
+      <ImageView fx:id="imgCuerda" blendMode="MULTIPLY" fitHeight="69.0" fitWidth="67.0" layoutX="572.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/cuerdaAhorcado.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgCabeza" blendMode="MULTIPLY" fitHeight="69.0" fitWidth="76.0" layoutX="561.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/cabezaAhorcado.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgCuerpo" blendMode="MULTIPLY" fitHeight="108.0" fitWidth="12.0" layoutX="596.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/cuerpoAhorcado.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgBrazoDerecho" blendMode="MULTIPLY" fitHeight="55.0" fitWidth="47.0" layoutX="602.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/brazoDerecho.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgBrazoIzquierdo" blendMode="MULTIPLY" fitHeight="62.0" fitWidth="47.0" layoutX="549.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/brazoIzquierdo.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgPiernaDerecha" blendMode="MULTIPLY" fitHeight="69.0" fitWidth="47.0" layoutX="602.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/piernaDerecha.png" />
+         </image></ImageView>
+      <ImageView fx:id="imgPiernaIzquierda" blendMode="MULTIPLY" fitHeight="69.0" fitWidth="54.0" layoutX="543.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/piernaIzquierda.png" />
+         </image></ImageView>
+      <Label layoutX="163.0" layoutY="14.0" prefHeight="66.0" prefWidth="653.0" stylesheets="@Css/diseño.css" text="Adivina la palabra">
+         <font>
+            <Font name="Haettenschweiler" size="50.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7952380952380953" endY="1.0">
+               <stops>
+                  <Stop color="#08fbca" />
+                  <Stop color="#ff008c" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="imgVidas" fitHeight="36.0" fitWidth="229.0" layoutX="97.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblCantidadLetras" layoutX="279.0" layoutY="209.0" prefHeight="35.0" prefWidth="47.0" stylesheets="@Css/diseño_resto.css">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#08ffce" />
+                  <Stop color="#15ff00" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label layoutX="20.0" layoutY="214.0" stylesheets="@Css/diseño_resto.css" text="Cantidad de letras:">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#15ff00" />
+                  <Stop color="#e42f06" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <JFXButton fx:id="btnPista" contentDisplay="GRAPHIC_ONLY" layoutX="385.0" layoutY="501.0" onAction="#traerPista" prefHeight="53.0" prefWidth="76.0" ripplerFill="#250404" style="-fx-background-color: #fff; -fx-background-radius: 10; -fx-background-size: 10; -fx-border-color: #08fbca; -fx-border-radius: 10;" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="pista" fitHeight="43.0" fitWidth="47.0" />
+         </graphic>
+         <effect>
+            <DropShadow color="#07e535" spread="0.24" />
+         </effect>
+      </JFXButton>
+      <Label layoutX="388.0" layoutY="469.0" stylesheets="@Css/diseño_resto.css" text="Pista:">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#15ff00" />
+                  <Stop color="#ff3200" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lblTiempo" layoutX="643.0" layoutY="428.0" prefHeight="43.0" prefWidth="150.0">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPalabraOculta" alignment="CENTER" layoutX="23.0" layoutY="135.0" prefHeight="51.0" prefWidth="405.0">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#20ee04" />
+                  <Stop color="#00bbff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Century Gothic" size="40.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="20.0" layoutY="247.0" prefHeight="232.0" prefWidth="411.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="58.0" />
+            <ColumnConstraints halignment="CENTER" maxWidth="95.0" minWidth="0.0" prefWidth="59.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="59.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="58.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="95.0" minWidth="8.0" prefWidth="59.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="97.0" minWidth="5.0" prefWidth="59.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="67.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="78.0" minHeight="0.0" prefHeight="59.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="130.0" minHeight="10.0" prefHeight="61.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="108.0" minHeight="10.0" prefHeight="62.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="87.0" minHeight="5.0" prefHeight="57.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="btnA" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="A">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnB" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="B" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnC" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="C" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnD" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="D" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnE" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="E" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnF" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="F" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnG" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="G" GridPane.columnIndex="6">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnH" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="H" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnI" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="I" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnJ" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="J" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnK" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="K" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnL" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="L" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnM" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="M" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnN" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="N" GridPane.columnIndex="6" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnEYE" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="Ñ" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnO" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="O" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnP" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="P" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnQ" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="Q" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnR" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="R" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnS" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="S" GridPane.columnIndex="5" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnT" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="T" GridPane.columnIndex="6" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnU" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="U" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnV" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="V" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnW" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="W" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="27.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnX" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="X" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnY" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="Y" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+            <JFXButton fx:id="btnZ" contentDisplay="BOTTOM" onAction="#botonClicleado" prefHeight="58.0" prefWidth="58.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 10; -fx-border-radius: 10;" text="Z" GridPane.columnIndex="5" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Haettenschweiler" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f0ff0a" />
+                        <Stop color="#ff00e5" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <ImageView fx:id="imgFinal" fitHeight="586.0" fitWidth="1042.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <JFXButton fx:id="btnRegresar" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" onAction="#exit" prefHeight="60.0" prefWidth="60.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="40" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

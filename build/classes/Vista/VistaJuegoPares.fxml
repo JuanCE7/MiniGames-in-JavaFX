@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="670.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VistaJuegoParesController">
+   <children>
+      <ImageView fx:id="fondo" fitHeight="681.0" fitWidth="1210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/gaming2.png" />
+         </image></ImageView>
+      <Label layoutX="240.0" layoutY="14.0" prefHeight="66.0" prefWidth="730.0" stylesheets="@Css/diseño.css" text="Encuentra los pares">
+         <font>
+            <Font name="Haettenschweiler" size="50.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.6904761904761905" endY="1.0" startX="0.5714285714285714" startY="0.2714285714285714">
+               <stops>
+                  <Stop color="#05fcff" />
+                  <Stop color="#05fcff" offset="0.007662835249042145" />
+                  <Stop color="#c90083" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lbTiempo" layoutX="1033.0" layoutY="629.0" prefHeight="33.0" prefWidth="133.0">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff7f00" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <GridPane fx:id="grid" alignment="CENTER" layoutX="37.0" layoutY="116.0" prefHeight="496.0" prefWidth="1129.0" style="-fx-border-color: #fff;">
+         <effect>
+            <DropShadow color="#05e1ff" height="29.9" radius="15.93" spread="0.82" width="35.82" />
+         </effect></GridPane>
+      <Label layoutX="940.0" layoutY="624.0" prefHeight="42.0" prefWidth="111.0" stylesheets="@Css/diseño_resto.css" text="TIEMPO">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16f2c0" />
+                  <Stop color="#f0ff03" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="37.0" layoutY="625.0" prefHeight="42.0" prefWidth="285.0" stylesheets="@Css/diseño_resto.css" text="CARTAS ENCONTRADAS">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#16f2c0" />
+                  <Stop color="#f0ff03" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lbcartasEncontradas" layoutX="322.0" layoutY="623.0" prefHeight="45.0" prefWidth="96.0">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ffd700" />
+                  <Stop color="#ff1600" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgFinal" fitHeight="690.0" fitWidth="1210.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagenes/gaming2.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnRegresar" contentDisplay="GRAPHIC_ONLY" layoutX="7.0" onAction="#exit" prefHeight="60.0" prefWidth="60.0">
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="40" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

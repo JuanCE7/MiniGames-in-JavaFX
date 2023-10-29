@@ -1,0 +1,17 @@
+
+@font-face {
+    src: url("ka.ttf");
+}
+
+.label{
+    -fx-font-family: "Karmatic Arcade";
+    -fx-font-size: 35pt;
+}
+
+.button{
+    -fx-background-radius: 6;
+    -fx-text-fill: #000066;
+    -fx-font-family: "Karmatic Arcade";
+    -fx-font-size: 12pt;
+}
+

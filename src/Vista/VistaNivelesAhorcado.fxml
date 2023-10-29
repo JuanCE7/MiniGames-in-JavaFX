@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.VistaNivelesAhorcadoController">
+   <children>
+      <ImageView fitHeight="576.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/wallpapertip_gaming-wallpapers-1920x1080_1155072.png" />
+         </image>
+      </ImageView>
+      <JFXButton contentDisplay="BOTTOM" layoutX="165.0" layoutY="265.0" text="NIVEL FÁCIL" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="BOTTOM" layoutX="444.0" layoutY="329.0" text="NIVEL MEDIO" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="BOTTOM" layoutX="741.0" layoutY="265.0" text="NIVEL DIFÍCIL" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="59.0" prefWidth="60.0" textFill="WHITE">
+         <font>
+            <Font name="Haettenschweiler" size="27.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="50" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
